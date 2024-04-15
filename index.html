@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>The Farm Game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <div class="score-card">
+          <span>Score</span>
+          <span class="high-score"></span>
+          <span class="score"></span>
+        </div>
+        <div class="level-card">
+          <span class="level level1">Nível 1</span>
+        </div>
+      </header>
+
+      <div class="player"></div>
+      <div class="enemy fly level1 invisible"></div>
+      <div class="enemy obstacle level1"></div>
+      <div class="star"></div>
+
+      <div class="restart-game">
+        <div class="content">
+          <span class="text">Restart</span>
+          <button class="btn-reset-game"></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

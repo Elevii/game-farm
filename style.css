@@ -1,0 +1,254 @@
+@font-face {
+    font-family: Minecraft;
+    src: url('./assets/Minecraft.ttf');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Minecraft;
+    color: #fff;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-image: url("./assets/sky.png");
+    background-size: cover;
+    overflow: hidden;
+
+    animation: bg-move 6s linear infinite;
+}
+
+@keyframes bg-move {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: -80%;
+    }
+}
+
+.player {
+    width: 6rem;
+    height: 6rem;
+
+    position: absolute;
+    bottom: -.5%;
+    left: 8%;
+    background-image: url('./assets/mario.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.player.jump {
+    background-image: url("./assets/mario-jump.png");
+    animation: jump 1.5s infinite;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: 250px;
+    }
+
+    40% {
+        bottom: 250px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.player.duck {
+    width: 6rem;
+    height: 3rem;
+}
+
+/*
+    ENEMY
+*/
+
+.enemy {
+    position: absolute;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    animation: move 6s linear infinite;
+}
+
+.obstacle {
+    width: 60px;
+    height: 120px;
+    bottom: 0;
+    left: 80%;
+    background-image: url('./assets/obstacle.png');
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+.obstacle-xs {
+    width: 30px;
+    height: 70px;
+}
+
+.obstacle-s {
+    width: 60px;
+    height: 80px;
+}
+
+.obstacle-m {
+    width: 60px;
+    height: 90px;
+}
+
+.obstacle-l {
+    width: 120px;
+    height: 120px;
+}
+
+.fly {
+    width: 4rem;
+    height: 4rem;
+    background-image: url("./assets/phantom.gif");
+    border-radius: 100%;
+    bottom: 100px;
+    left: 60%;
+
+    
+    animation: moveFly 4s linear infinite;
+}
+
+.fly-top {
+    bottom: 100px;
+}
+
+.fly-center {
+    bottom: 70px;
+}
+
+.fly-bottom {
+    bottom: 35px;
+}
+
+.invisible {
+    display: none;
+}
+
+@keyframes move {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100px;
+    }
+}
+
+@keyframes moveFly {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -200px;
+    }
+}
+/* 
+    LEVEL
+*/
+
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.level-card {
+    font-family: Minecraft;
+    font-size: 40px;
+    margin: 20px;
+}
+
+/* 
+    Score
+*/
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    font-family: Minecraft;
+    font-size: 50px;
+    letter-spacing: 1rem;
+    margin: 20px;
+}
+
+.score-card span {
+    margin-right: 20px;
+}
+
+.restart-game {
+    visibility: hidden;
+    font-family: Minecraft;
+    background-color: #ffffffb8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    z-index: 2;
+}
+
+.restart-game.show {
+    visibility: visible;
+}
+
+.restart-game .content {
+    display: flex;
+    align-items: center;
+}
+
+.restart-game .btn-reset-game {
+    border: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/restart.png');
+    background-size: contain;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.restart-game .text {
+    align-self: end;
+    color: #000;
+}
+
+.stop.game-container,
+.stop .obstacle,
+.stop .fly {
+    animation-play-state: paused;
+}
+
+.stop .player {
+    background-image: url('./assets/mario.gif');
+}
