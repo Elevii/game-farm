@@ -21,7 +21,7 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
     ) {
       setTimeout(() => {
         flyElement.classList.remove("invisible");
-      }, 2000);
+      }, 2300);
       return;
     }
   }
