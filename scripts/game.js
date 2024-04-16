@@ -19,7 +19,7 @@ const Game = () => {
     scoreElement,
     level,
   });
-  const { startEnemy } = Enemy({
+  const { startEnemy, stopEnemy } = Enemy({
     obstacleElement,
     flyElement,
     level,
@@ -50,6 +50,7 @@ const Game = () => {
     restartGameElement.classList.add("show");
     gameContainerElement.classList.add("stop");
     clearInterval(changeStartEnemies);
+    stopEnemy();
   }
 
   function restartGame() {

@@ -6,10 +6,8 @@ const Player = ({
   stopGame,
 }) => {
   function addJumpListener() {
-    document.addEventListener("keydown", (event) => {
-      if (event.key === " " || event.key === "ArrowUp") {
-        jump();
-      }
+    document.addEventListener("click", (event) => {
+      jump();
     });
   }
 

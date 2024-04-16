@@ -71,7 +71,7 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
     randomiseEnemyPosition();
   }
 
-  return { startEnemy };
+  return { startEnemy, stopEnemy };
 };
 
 export default Enemy;
