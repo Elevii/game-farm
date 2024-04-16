@@ -22,7 +22,7 @@ body {
     background-size: cover;
     overflow: hidden;
 
-    animation: bg-move 6s linear infinite;
+    animation: bg-move 10s linear infinite;
 }
 
 @keyframes bg-move {
@@ -31,7 +31,7 @@ body {
     }
 
     100% {
-        background-position: -80%;
+        background-position: -50%;
     }
 }
 
@@ -181,7 +181,7 @@ body {
 
 .level-card {
     font-family: Minecraft;
-    font-size: 40px;
+    font-size: 32px;
     margin: 20px;
 }
 
@@ -193,7 +193,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Minecraft;
-    font-size: 50px;
+    font-size: 32px;
     letter-spacing: 1rem;
     margin: 20px;
 }

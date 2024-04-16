@@ -50,10 +50,11 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
   }
 
   let beforeFly;
+  let handleFlyEnemy
   function randomiseEnemyPosition() {
     if (!flyElement.classList.contains("invisible")) {
       const flyPosition = getRandomFlyPositions();
-      setInterval(() => {
+      handleFlyEnemy = setInterval(() => {
         flyElement.classList.remove(beforeFly);
         flyElement.classList.add(`fly-${flyPosition}`);
         beforeFly = `fly-${flyPosition}`;
@@ -61,12 +62,16 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
     }
   }
 
+  function stopEnemy() {
+    clearInterval(handleFlyEnemy);
+  }
+
   function startEnemy() {
     randomiseEnemy();
     randomiseEnemyPosition();
   }
 
-  return { startEnemy };
+  return { startEnemy, stopEnemy };
 };
 
 export default Enemy;
