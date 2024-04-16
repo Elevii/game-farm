@@ -3,7 +3,7 @@ const Level = ({ obstacleElement, scoreElement, level }) => {
 
   function newLevel() {
     let score = +scoreElement.innerText;
-    if (score >= 400 && score <= 800 && oldLevel != "level2") {
+    if (score >= 10 && score <= 800 && oldLevel != "level2") {
       handleLevel("level1", "level2");
       level.innerText = "Nível 2";
       return;

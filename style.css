@@ -22,7 +22,7 @@ body {
     background-size: cover;
     overflow: hidden;
 
-    animation: bg-move 10s linear infinite;
+    animation: bg-move 20s linear infinite;
 }
 
 @keyframes bg-move {
@@ -36,8 +36,8 @@ body {
 }
 
 .player {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
 
     position: absolute;
     bottom: -.5%;
@@ -47,11 +47,12 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 100%;
+    border: 1px solid;
 }
 
 .player.jump {
     background-image: url("./assets/mario-jump.png");
-    animation: jump 1.5s infinite;
+    animation: jump 1.8s infinite;
 }
 
 @keyframes jump {
@@ -60,11 +61,11 @@ body {
     }
 
     25% {
-        bottom: 250px;
+        bottom: 260px;
     }
 
     40% {
-        bottom: 250px;
+        bottom: 260px;
     }
 
     100% {
@@ -88,7 +89,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
-    animation: move 6s linear infinite;
+    animation: move 4s linear infinite;
+    border: 1px solid;
 }
 
 .obstacle {
@@ -126,7 +128,7 @@ body {
     height: 4rem;
     background-image: url("./assets/phantom.gif");
     border-radius: 100%;
-    bottom: 100px;
+    bottom: 80px;
     left: 60%;
 
     
@@ -134,15 +136,15 @@ body {
 }
 
 .fly-top {
-    bottom: 100px;
+    bottom: 80px;
 }
 
 .fly-center {
-    bottom: 70px;
+    bottom: 60px;
 }
 
 .fly-bottom {
-    bottom: 35px;
+    bottom: 30px;
 }
 
 .invisible {
