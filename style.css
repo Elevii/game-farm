@@ -36,13 +36,13 @@ body {
 }
 
 .player {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
 
     position: absolute;
     bottom: -.5%;
     left: 8%;
-    background-image: url('./assets/mario.gif');
+    background-image: url('./assets/corrida.gif');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -51,7 +51,7 @@ body {
 }
 
 .player.jump {
-    background-image: url("./assets/mario-jump.png");
+    background-image: url("./assets/pulo.gif");
     animation: jump 1.8s infinite;
 }
 
@@ -61,11 +61,11 @@ body {
     }
 
     25% {
-        bottom: 260px;
+        bottom: 240px;
     }
 
     40% {
-        bottom: 260px;
+        bottom: 240px;
     }
 
     100% {
@@ -95,38 +95,41 @@ body {
 
 .obstacle {
     width: 60px;
-    height: 120px;
-    bottom: 0;
+    height: 60px;
+    bottom: -1%;
     left: 80%;
-    background-image: url('./assets/obstacle.png');
+    background-image: url('./assets/percevejo.gif');
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
 }
 
 .obstacle-xs {
     width: 30px;
-    height: 70px;
+    height: 30px;
 }
 
 .obstacle-s {
     width: 60px;
-    height: 80px;
+    height: 60px;
+    bottom: -3%;
 }
 
 .obstacle-m {
-    width: 60px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+    bottom: -3%;
 }
 
 .obstacle-l {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    bottom: -4%;
 }
 
 .fly {
-    width: 4rem;
+    width: 2rem;
     height: 4rem;
-    background-image: url("./assets/phantom.gif");
+    background-image: url("./assets/mosca.gif");
     border-radius: 100%;
     bottom: 80px;
     left: 60%;
@@ -252,5 +255,5 @@ body {
 }
 
 .stop .player {
-    background-image: url('./assets/mario.gif');
+    background-image: url('./assets/desmaio.png');
 }
