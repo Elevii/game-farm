@@ -51,7 +51,7 @@ body {
 }
 
 .player.jump {
-    background-image: url("./assets/pulo.gif");
+    background-image: url("./assets/jump.gif");
     animation: jump 1.8s infinite;
 }
 
@@ -128,8 +128,8 @@ body {
 
 .fly {
     width: 2rem;
-    height: 4rem;
-    background-image: url("./assets/mosca.gif");
+    height: 2rem;
+    background-image: url("./assets/moscasprite.gif");
     border-radius: 100%;
     bottom: 80px;
     left: 60%;
@@ -255,5 +255,5 @@ body {
 }
 
 .stop .player {
-    background-image: url('./assets/desmaio.png');
+    background-image: url('./assets/faint.png');
 }
