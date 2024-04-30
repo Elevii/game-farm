@@ -52,7 +52,7 @@ body {
 
 .player.jump {
     background-image: url("./assets/jump.gif");
-    animation: jump 1.8s infinite;
+    animation: jump 1.5s infinite;
 }
 
 @keyframes jump {
@@ -61,21 +61,16 @@ body {
     }
 
     25% {
-        bottom: 240px;
+        bottom: 110px;
     }
 
     40% {
-        bottom: 240px;
+        bottom: 110px;
     }
 
     100% {
         bottom: 0;
     }
-}
-
-.player.duck {
-    width: 6rem;
-    height: 3rem;
 }
 
 /*
