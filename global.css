@@ -1,0 +1,247 @@
+@font-face {
+    font-family: Minecraft;
+    src: url('./assets/Minecraft.ttf');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    font-family: Minecraft;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-image: url("./assets/sky.png");
+    background-size: cover;
+    overflow: hidden;
+
+    animation: bg-move 20s linear infinite;
+}
+
+@keyframes bg-move {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: -50%;
+    }
+}
+
+.home {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.home-header {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.header-image {
+    width: 6rem;
+    height: 6rem;
+}
+
+.header-title {
+    font-size: 2.5rem;
+}
+
+.text-animated {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 25%, rgba(233, 129, 13, 0.9514180672268907) 67%, rgba(233, 129, 13, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 25%, rgba(233, 129, 13, 0.9514180672268907) 67%, rgba(233, 129, 13, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    50% {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 18%, rgba(233, 129, 13, 0.9514180672268907) 55%, rgba(233, 129, 13, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    100% {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(233, 129, 13, 0.9514180672268907) 30%, rgba(233, 129, 13, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.main-list {
+    text-align: center;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.main-list>a {
+    text-decoration: none;
+}
+
+.list-item {
+    position: relative;
+    width: max-content;
+    margin: 1rem auto;
+}
+
+.item-text {
+    font-size: x-large;
+    font-weight: 700;
+    margin: 0;
+}
+
+.icon::before {
+    position: absolute;
+    content: '';
+    left: -50px;
+    top: -15px;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url("assets/sojas1.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.home-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: .8rem;
+}
+
+/* MODAL */
+
+.modal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80vw;
+    border-radius: 8px;
+    background: rgba(245, 243, 242, .8);
+    padding: 2rem 1rem;
+}
+
+.close {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    color: #000;
+    font-size: 1.5rem;
+    font-family: 'Minecraft';
+    border: none;
+    background: transparent;
+    padding: 0 .5rem;
+    z-index: 10;
+}
+
+.modal-content>h2 {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+input.modal-input {
+    width: -webkit-fill-available;
+    padding: 1rem;
+    color: orange;
+    border: solid 1px orange;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    outline-color: orange;
+    font-family: Minecraft;
+}
+
+input.modal-input.error {
+    border-color: red;
+}
+
+.not-found {
+    position: absolute;
+    color: red;
+    background: rgba(245, 243, 242, .8);
+    font-size: .8rem;
+    width: max-content;
+    left: 1rem;
+    top: 0px;
+}
+
+.error {
+    color: red;
+    font-size: .8rem;
+    margin-top: .5rem;
+    display: block;
+}
+
+button.modal-button {
+    width: 100%;
+    padding: .5rem 1rem;
+    border: solid 1px orange;
+    border-radius: 4px;
+    background: orange;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .8rem;
+    font-family: Minecraft;
+}
+
+.desactive {
+    display: none;
+}

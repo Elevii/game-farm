@@ -1,5 +1,5 @@
-import Game from "./scripts/game.js";
-import { restart } from "./scripts/elements.js";
+import Game from "../../scripts/game.js";
+import { restart } from "../../scripts/elements.js";
 
 const { startGame, restartGame } = Game();
 
