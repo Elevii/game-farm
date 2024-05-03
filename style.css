@@ -84,7 +84,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
-    animation: move 4s linear infinite;
+    animation: move 6s linear infinite;
     border: 1px solid;
 }
 
@@ -130,8 +130,17 @@ body {
     left: 60%;
 
     
+    animation: moveFly 6s linear infinite;
+}
+
+.fly.level2 {
+    animation: moveFly 5s linear infinite;
+}
+
+.fly.level3 {
     animation: moveFly 4s linear infinite;
 }
+
 
 .fly-top {
     bottom: 80px;
