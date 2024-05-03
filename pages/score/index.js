@@ -5,6 +5,16 @@ function handlerSaves() {
     const saves = JSON.parse(localStorage.getItem("save"));
     if (saves.length > 0) {
       const users = saves.map((save) => save);
+      const ranking = users.sort(function (a, b) {
+        if (a.score > b.score) {
+          return -1;
+        }
+        if (a.score < b.score) {
+          return 1;
+        }
+        // a must be equal to b
+        return 0;
+      });
       scoreListArray(users);
       return;
     }
@@ -13,7 +23,7 @@ function handlerSaves() {
   }
 
   const records = document.createElement("div");
-  records.classList.add("no-score")
+  records.classList.add("no-score");
   scoreList.appendChild(records);
 
   records.innerHTML = `    

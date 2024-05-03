@@ -11,6 +11,7 @@ import {
   obstacleElement,
   flyElement,
   level,
+  exit,
 } from "./elements.js";
 
 const Game = () => {
@@ -41,8 +42,10 @@ const Game = () => {
   function startEnemies() {
     changeStartEnemies = setInterval(() => {
       startEnemy();
-    }, 4000);
+    }, 6000);
   }
+
+  exit.addEventListener("click", () => saveUser());
 
   function stopGame() {
     stopPlayer();
@@ -54,7 +57,36 @@ const Game = () => {
   }
 
   function restartGame() {
+    saveUser();
     location.reload();
+  }
+
+  function saveUser() {
+    const value = localStorage.getItem("user");
+    const user = {
+      user: JSON.parse(value),
+      score: +scoreElement.innerText,
+    };
+    handlerUsers(user);
+    location.replace("../../index.html");
+  }
+
+  function handlerUsers(user) {
+    if (localStorage.getItem("save")) {
+      const saves = JSON.parse(localStorage.getItem("save"));
+      let newSave = [];
+      if (saves.length > 0) {
+        const users = saves.map((save) => save);
+        users.push(user);
+        return localStorage.setItem("save", JSON.stringify(users));
+      }
+      newSave.push(saves);
+      newSave.push(user);
+      localStorage.setItem("save", JSON.stringify(newSave));
+      return;
+    }
+
+    localStorage.setItem("save", JSON.stringify(user));
   }
 
   function startGame() {

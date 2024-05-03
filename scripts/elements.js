@@ -7,6 +7,7 @@ const scoreElement = document.querySelector(".score-card .score");
 const highScoreElement = document.querySelector(".score-card .high-score");
 const level = document.querySelector(".level-card .level")
 const restart = document.querySelector(".btn-reset-game");
+const exit = document.querySelector(".exit")
 
 export {
   playerElement,
@@ -17,5 +18,6 @@ export {
   scoreElement,
   highScoreElement,
   level,
-  restart
+  restart,
+  exit
 };

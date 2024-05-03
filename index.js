@@ -50,11 +50,10 @@ score.addEventListener("mouseleave", (ev) => {
 
 function saveUser() {
   const value = document.querySelector(".modal-input");
-  const user = { user: value.value, score: 0 };
-
+  
   if (!validateInput(value)) return;
 
-  handlerUsers(user);
+  localStorage.setItem("user", JSON.stringify(value.value));
   location.replace(`/pages/game/index.html`);
 }
 
@@ -76,24 +75,6 @@ function validateInput(value) {
   notFound.classList.add("desactive");
   error.classList.add("desactive");
   return true;
-}
-
-function handlerUsers(user) {
-  if (localStorage.getItem("save")) {
-    const saves = JSON.parse(localStorage.getItem("save"));
-    let newSave = [];
-    if (saves.length > 0) {
-      const users = saves.map((save) => save);
-      users.push(user);
-      return localStorage.setItem("save", JSON.stringify(users));
-    }
-    newSave.push(saves);
-    newSave.push(user);
-    localStorage.setItem("save", JSON.stringify(newSave));
-    return;
-  }
-
-  localStorage.setItem("save", JSON.stringify(user));
 }
 
 function closeModal() {

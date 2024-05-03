@@ -22,7 +22,7 @@ const Player = ({
     setTimeout(() => {
       playerElement.classList.remove("jump");
       jumping = false;
-    }, 1800);
+    }, 1500);
   }
 
   /**

@@ -15,7 +15,7 @@
 
 .player.jump {
     background-image: url("../../assets/jump.gif");
-    animation: jump 1.8s infinite;
+    animation: jump 1.5s infinite;
 }
 
 @keyframes jump {
@@ -24,21 +24,16 @@
     }
 
     25% {
-        bottom: 200px;
+        bottom: 110px;
     }
 
     40% {
-        bottom: 200px;
+        bottom: 110px;
     }
 
     100% {
         bottom: 0;
     }
-}
-
-.player.duck {
-    width: 6rem;
-    height: 3rem;
 }
 
 /*
@@ -52,7 +47,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    animation: move 4s linear infinite;
+    animation: move 6s linear infinite;
     border: 1px solid;
 }
 
@@ -72,21 +67,21 @@
 }
 
 .obstacle-s {
-    width: 50px;
-    height: 50px;
-    bottom: -3%;
+    width: 40px;
+    height: 40px;
+    bottom: -1%;
 }
 
 .obstacle-m {
-    width: 60px;
-    height: 60px;
-    bottom: -3%;
+    width: 50px;
+    height: 50px;
+    bottom: -2%;
 }
 
 .obstacle-l {
-    width: 70px;
-    height: 70px;
-    bottom: -4%;
+    width: 60px;
+    height: 60px;
+    bottom: -2%;
 }
 
 .fly {
@@ -96,17 +91,25 @@
     border-radius: 100%;
     bottom: 80px;
     left: 60%;
+    
+    animation: moveFly 6s linear infinite;
+}
 
+.fly.level2 {
+    animation: moveFly 5s linear infinite;
+}
 
+.fly.level3 {
     animation: moveFly 4s linear infinite;
 }
+
 
 .fly-top {
     bottom: 80px;
 }
 
 .fly-center {
-    bottom: 60px;
+    bottom: 50px;
 }
 
 .fly-bottom {
