@@ -55,7 +55,7 @@ const Player = ({
     const obstacleT = obstacleClientRect.top;
     const xCollisionObstacle =
       obstacleR - LEFT_BUFFER > playerL - RIGHT_BUFFER && obstacleL < playerR - RIGHT_BUFFER;
-    const yCollisionObstacle = playerB > obstacleT && playerT < obstacleB;
+    const yCollisionObstacle = playerB - RIGHT_BUFFER > obstacleT && playerT - RIGHT_BUFFER < obstacleB;
 
     const flyClientRect = flyElement.getBoundingClientRect();
     const flyB = flyClientRect.bottom;
