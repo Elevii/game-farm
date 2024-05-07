@@ -9,12 +9,12 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
       hasLesm = true;
     }
     
-    const index = Math.floor(Math.random() * (OBSTACLE_SIZES.length - 1));
+    const index = Math.floor(Math.random() * (OBSTACLE_SIZES.length));
     return OBSTACLE_SIZES[index];
   }
 
   function getRandomFlyPositions() {
-    const index = Math.floor(Math.random() * (FLY_POSITIONS.length - 1));
+    const index = Math.floor(Math.random() * (FLY_POSITIONS.length));
     return FLY_POSITIONS[index];
   }
 

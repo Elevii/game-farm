@@ -13,7 +13,8 @@ import {
   level,
   exit,
   influence,
-  power
+  power,
+  playerSupreme,
 } from "./elements.js";
 
 const Game = () => {
@@ -41,7 +42,8 @@ const Game = () => {
     influence,
     scoreElement,
     setScore,
-    power
+    power,
+    playerSupreme,
   });
   const INFLUENCE_ITEMS = ["supreme", "negative", "positive"];
   const INFLUENCE_POSITION = ["bottom", "middle", "top"];
@@ -57,9 +59,9 @@ const Game = () => {
   let changeInfluence;
   function startInfluence() {
     changeInfluence = setInterval(() => {
-      const index = Math.floor(Math.random() * (INFLUENCE_ITEMS.length - 1));
+      const index = Math.floor(Math.random() * (INFLUENCE_ITEMS.length));
       const position = Math.floor(
-        Math.random() * (INFLUENCE_POSITION.length - 1)
+        Math.random() * (INFLUENCE_POSITION.length)
       );
       influence.classList.remove(beforeInfluence);
       influence.classList.add(`${INFLUENCE_ITEMS[index]}`);
@@ -67,7 +69,7 @@ const Game = () => {
       beforeInfluence = `${
         (INFLUENCE_ITEMS[index], INFLUENCE_POSITION[position])
       }`;
-    }, 36000);
+    }, 24000);
   }
 
   exit.addEventListener("click", () => saveUser());

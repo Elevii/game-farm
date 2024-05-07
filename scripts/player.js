@@ -8,6 +8,7 @@ const Player = ({
   scoreElement,
   setScore,
   power,
+  playerSupreme,
 }) => {
   function addJumpListener() {
     document.addEventListener("click", (event) => {
@@ -32,6 +33,9 @@ const Player = ({
   /**
    * COLLISION
    */
+
+  let count = 10;
+
   let collisionInterval;
   let protect = false;
   function monitorCollision() {
@@ -41,6 +45,7 @@ const Player = ({
         stopGame();
       } else if (isInfluenceCollision()) {
         if (influence.classList.contains("supreme")) {
+          countPower();
           influence.classList.remove("supreme");
           power.classList.add("active");
           playerElement.classList.add("supreme");
@@ -70,8 +75,10 @@ const Player = ({
 
   function desabilityProtect() {
     setTimeout(() => {
+      clearInterval(changeCount);
       protect = false;
       playerElement.classList.remove("supreme");
+      count = 10;
     }, 10000);
   }
 
@@ -79,6 +86,15 @@ const Player = ({
     setTimeout(() => {
       power.classList.remove(`active`);
     }, 5000);
+  }
+
+  let changeCount;
+  function countPower() {
+    changeCount = setInterval(() => {
+      count = count - 1;
+      if (count === 0) return (playerSupreme.innerHTML = "");
+      playerSupreme.innerHTML = `${count - 1}`;
+    }, 1000);
   }
 
   // Left buffer for tail

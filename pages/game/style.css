@@ -12,7 +12,12 @@
     border-radius: 100%;
 }
 
+.player-supreme {
+    display: none;
+}
+
 .supreme>.player-supreme {
+    display: block;
     width: 100%;
     height: 100%;
     border-radius: 100%;

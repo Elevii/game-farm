@@ -10,6 +10,7 @@ const restart = document.querySelector(".btn-reset-game");
 const exit = document.querySelector(".exit");
 const influence = document.querySelector(".influence");
 const power = document.querySelector(".power");
+const playerSupreme = document.querySelector(".player-supreme");
 
 export {
   playerElement,
@@ -24,4 +25,5 @@ export {
   exit,
   influence,
   power,
+  playerSupreme,
 };
