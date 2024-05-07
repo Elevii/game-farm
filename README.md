@@ -18,5 +18,5 @@ Você está prestes a entrar numa luta travada contra os inimigos do AGRO.
 - Cifrão vermelho: Retira 100 pontos;
 - Semente Suprema: Lhe concede 10 segundos de invunerabilidade contra inimigos.
   
-OBS: Os itens de influência surgem aleatóriamente a cada 36 segundos;
+OBS: Os itens de influência surgem aleatóriamente a cada 24 segundos;
 
