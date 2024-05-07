@@ -19,10 +19,8 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
       level.classList.contains("level2") &&
       flyElement.classList.contains("invisible")
     ) {
-      setTimeout(() => {
         flyElement.classList.remove("invisible");
         randomiseEnemyPosition();
-      }, 5000);
       return;
     }
   }
