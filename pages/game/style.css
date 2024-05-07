@@ -114,7 +114,7 @@
     bottom: 80px;
     left: 60%;
 
-    animation: moveFly 4s linear infinite;
+    animation: moveFly 6s linear infinite;
 }
 
 @media(min-width: 780px) {
