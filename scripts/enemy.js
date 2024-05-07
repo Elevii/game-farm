@@ -22,7 +22,7 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
       setTimeout(() => {
         flyElement.classList.remove("invisible");
         randomiseEnemyPosition();
-      }, 4000);
+      }, 5000);
       return;
     }
   }
