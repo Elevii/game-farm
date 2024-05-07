@@ -12,6 +12,8 @@ import {
   flyElement,
   level,
   exit,
+  influence,
+  power
 } from "./elements.js";
 
 const Game = () => {
@@ -26,7 +28,7 @@ const Game = () => {
     level,
     newLevel,
   });
-  const { startScore, stopScore, checkForHighScore } = Score({
+  const { startScore, stopScore, checkForHighScore, setScore } = Score({
     scoreElement,
     highScoreElement,
   });
@@ -36,13 +38,36 @@ const Game = () => {
     flyElement,
     checkForHighScore,
     stopGame,
+    influence,
+    scoreElement,
+    setScore,
+    power
   });
+  const INFLUENCE_ITEMS = ["supreme", "negative", "positive"];
+  const INFLUENCE_POSITION = ["bottom", "middle", "top"];
 
   let changeStartEnemies;
   function startEnemies() {
     changeStartEnemies = setInterval(() => {
       startEnemy();
     }, 6000);
+  }
+
+  let beforeInfluence;
+  let changeInfluence;
+  function startInfluence() {
+    changeInfluence = setInterval(() => {
+      const index = Math.floor(Math.random() * (INFLUENCE_ITEMS.length - 1));
+      const position = Math.floor(
+        Math.random() * (INFLUENCE_POSITION.length - 1)
+      );
+      influence.classList.remove(beforeInfluence);
+      influence.classList.add(`${INFLUENCE_ITEMS[index]}`);
+      influence.classList.add(`${INFLUENCE_POSITION[position]}`);
+      beforeInfluence = `${
+        (INFLUENCE_ITEMS[index], INFLUENCE_POSITION[position])
+      }`;
+    }, 12000);
   }
 
   exit.addEventListener("click", () => saveUser());
@@ -53,6 +78,7 @@ const Game = () => {
     restartGameElement.classList.add("show");
     gameContainerElement.classList.add("stop");
     clearInterval(changeStartEnemies);
+    clearInterval(changeInfluence);
     stopEnemy();
   }
 
@@ -95,6 +121,7 @@ const Game = () => {
     startLevel();
     startEnemies();
     startEnemy();
+    startInfluence();
   }
 
   return {

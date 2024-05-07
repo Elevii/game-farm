@@ -10,7 +10,33 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 100%;
-    border: 1px solid;
+}
+
+.supreme>.player-supreme {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: rgb(255, 255, 255);
+    opacity: .5;
+
+    animation: colors 2s infinite;
+}
+
+@keyframes colors {
+    0% {
+        position: -100%;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 25%, rgba(233, 129, 13, 0.9514180672268907) 67%, rgba(233, 129, 13, 1) 100%);
+    }
+
+    50% {
+        position: 50%;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 18%, rgba(233, 129, 13, 0.9514180672268907) 55%, rgba(233, 129, 13, 1) 100%);
+    }
+
+    100% {
+        position: 100%;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(233, 129, 13, 0.9514180672268907) 30%, rgba(233, 129, 13, 1) 100%);
+    }
 }
 
 @media(min-width: 780px) {
@@ -55,7 +81,6 @@
     background-position: center;
 
     animation: move 6s linear infinite;
-    border: 1px solid;
 }
 
 .obstacle {
@@ -253,4 +278,65 @@
 
 .stop .player {
     background-image: url('../../assets/faint.png');
+}
+
+.influence {
+    display: none;
+
+    position: absolute;
+    bottom: 80px;
+    left: 60%;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    animation: move 12s linear infinite;
+}
+
+.influence.supreme,
+.influence.positive,
+.influence.negative {
+    display: block;
+}
+
+.influence.supreme {
+    background-image: url("../../assets/sojastandard.gif");
+}
+
+.influence.positive {
+    background-image: url("../../assets/cifra-verde.gif");
+}
+
+.influence.negative {
+    background-image: url("../../assets/cifra-vermelha.gif");
+}
+
+.influence.bottom {
+    bottom: 30px;
+}
+
+.influence.middle {
+    bottom: 50px;
+}
+
+.influence.top {
+    bottom: 80px;
+}
+
+.power {
+    display: none;
+    position: relative;
+    margin: auto;
+    top: 30%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.power.active {
+    display: block;
 }

@@ -4,6 +4,10 @@ const Player = ({
   flyElement,
   checkForHighScore,
   stopGame,
+  influence,
+  scoreElement,
+  setScore,
+  power,
 }) => {
   function addJumpListener() {
     document.addEventListener("click", (event) => {
@@ -29,13 +33,52 @@ const Player = ({
    * COLLISION
    */
   let collisionInterval;
+  let protect = false;
   function monitorCollision() {
     collisionInterval = setInterval(() => {
-      if (isCollision()) {
+      if (isCollision() && !protect) {
         checkForHighScore();
         stopGame();
+      } else if (isInfluenceCollision()) {
+        if (influence.classList.contains("supreme")) {
+          influence.classList.remove("supreme");
+          power.classList.add("active");
+          playerElement.classList.add("supreme");
+          power.innerHTML = "10 segundos de proteção suprema!";
+          protect = true;
+
+          desabilityProtect();
+          desabilityPower();
+        } else if (influence.classList.contains("positive")) {
+          setScore(+scoreElement.innerText + 100);
+          influence.classList.remove("positive");
+          power.classList.add("active");
+          power.innerHTML = "+R$100,00";
+
+          desabilityPower();
+        } else {
+          setScore(+scoreElement.innerText - 100);
+          influence.classList.remove("negative");
+          power.classList.add("active");
+          power.innerHTML = "-R$100,00";
+
+          desabilityPower();
+        }
       }
     }, 10);
+  }
+
+  function desabilityProtect() {
+    setTimeout(() => {
+      protect = false;
+      playerElement.classList.remove("supreme");
+    }, 10000);
+  }
+
+  function desabilityPower() {
+    setTimeout(() => {
+      power.classList.remove(`active`);
+    }, 5000);
   }
 
   // Left buffer for tail
@@ -56,7 +99,8 @@ const Player = ({
     const xCollisionObstacle =
       obstacleR - LEFT_BUFFER > playerL - RIGHT_BUFFER &&
       obstacleL < playerR - RIGHT_BUFFER;
-    const yCollisionObstacle = playerB - RIGHT_BUFFER > obstacleT && playerT - RIGHT_BUFFER < obstacleB;
+    const yCollisionObstacle =
+      playerB - RIGHT_BUFFER > obstacleT && playerT - RIGHT_BUFFER < obstacleB;
 
     const flyClientRect = flyElement.getBoundingClientRect();
     const flyB = flyClientRect.bottom;
@@ -70,6 +114,25 @@ const Player = ({
       (xCollisionObstacle && yCollisionObstacle) ||
       (xCollisionFly && yCollisionFly)
     );
+  }
+
+  function isInfluenceCollision() {
+    const playerClientRect = playerElement.getBoundingClientRect();
+    const playerL = playerClientRect.left;
+    const playerR = playerClientRect.right;
+    const playerB = playerClientRect.bottom;
+    const playerT = playerClientRect.top;
+
+    const influenceClientRect = influence.getBoundingClientRect();
+    const influenceB = influenceClientRect.bottom;
+    const influenceL = influenceClientRect.left;
+    const influenceR = influenceClientRect.right;
+    const influenceT = influenceClientRect.top;
+    const xCollisionInfluence =
+      influenceR - LEFT_BUFFER > playerL && influenceL < playerR;
+    const yCollisionInfluence = playerB > influenceT && playerT < influenceB;
+
+    return xCollisionInfluence && yCollisionInfluence;
   }
 
   function stopPlayer() {

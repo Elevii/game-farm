@@ -37,7 +37,8 @@ const Score = ({ scoreElement, highScoreElement }) => {
     startScore,
     stopScore,
     checkForHighScore,
-    score
+    score,
+    setScore,
   };
 };
 

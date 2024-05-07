@@ -20,7 +20,6 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
       flyElement.classList.contains("invisible")
     ) {
       setTimeout(() => {
-
         flyElement.classList.remove("invisible");
         randomiseEnemyPosition();
       }, 3000)
