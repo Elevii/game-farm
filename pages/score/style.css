@@ -14,7 +14,7 @@ ul.score-list {
     padding: 2rem;
     background: rgba(245, 243, 242, .9);
     border-radius: 8px;
-    max-height: 40rem;
+    max-height: 30rem;
     min-height: 20rem;
     overflow-y: scroll;
 }
