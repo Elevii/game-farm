@@ -42,7 +42,7 @@ const Game = () => {
   function startEnemies() {
     changeStartEnemies = setInterval(() => {
       startEnemy();
-    }, 4000);
+    }, 6000);
   }
 
   exit.addEventListener("click", () => saveUser());

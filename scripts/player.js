@@ -22,7 +22,7 @@ const Player = ({
     setTimeout(() => {
       playerElement.classList.remove("jump");
       jumping = false;
-    }, 1800);
+    }, 2000);
   }
 
   /**
@@ -54,7 +54,8 @@ const Player = ({
     const obstacleR = obstacleClientRect.right;
     const obstacleT = obstacleClientRect.top;
     const xCollisionObstacle =
-      obstacleR - LEFT_BUFFER > playerL - RIGHT_BUFFER && obstacleL < playerR - RIGHT_BUFFER;
+      obstacleR - LEFT_BUFFER > playerL - RIGHT_BUFFER &&
+      obstacleL < playerR - RIGHT_BUFFER;
     const yCollisionObstacle = playerB - RIGHT_BUFFER > obstacleT && playerT - RIGHT_BUFFER < obstacleB;
 
     const flyClientRect = flyElement.getBoundingClientRect();

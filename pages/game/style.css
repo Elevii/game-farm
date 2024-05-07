@@ -15,14 +15,14 @@
 
 @media(min-width: 780px) {
     .player {
-        width: 8%;
+        width: 4%;
         height: 8%;
     }
 }
 
 .player.jump {
     background-image: url("../../assets/jump.gif");
-    animation: jump 1.8s infinite;
+    animation: jump 2s infinite;
 }
 
 @keyframes jump {
@@ -54,14 +54,14 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    animation: move 4s linear infinite;
+    animation: move 6s linear infinite;
     border: 1px solid;
 }
 
 .obstacle {
-    width: 4rem;
-    height: 4rem;
-    bottom: -2%;
+    width: 3rem;
+    height: 3rem;
+    bottom: -1%;
     left: 80%;
     background-image: url('../../assets/percevejo.gif');
     border-top-left-radius: 100%;
@@ -69,39 +69,40 @@
 }
 
 .obstacle-s {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .obstacle-m {
-    width: 5rem;
-    height: 5rem;
-    bottom: -3%;
+    width: 4rem;
+    height: 4rem;
+    bottom: -2%;
 }
 
 .obstacle-l {
-    width: 5rem;
-    height: 6rem;
-    bottom: -4%;
+    width: 4rem;
+    height: 5rem;
+    bottom: -3%;
 }
 
 @media(min-width: 780px) {
 
     .obstacle-s {
-        width: 6%;
+        width: 3%;
         height: 8%;
+        bottom: -3%;
     }
 
     .obstacle-m {
-        width: 6%;
+        width: 4%;
         height: 10%;
-        bottom: -3%;
+        bottom: -4%;
     }
 
     .obstacle-l {
-        width: 8%;
+        width: 5%;
         height: 10%;
-        bottom: -3%;
+        bottom: -5%;
     }
 }
 
@@ -118,7 +119,7 @@
 
 @media(min-width: 780px) {
     .fly {
-        width: 4%;
+        width: 2%;
         height: 4%;
     }
 }
