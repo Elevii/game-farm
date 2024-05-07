@@ -40,6 +40,7 @@ const Player = ({
 
   // Left buffer for tail
   const LEFT_BUFFER = 50;
+  const RIGHT_BUFFER = 30;
   function isCollision() {
     const playerClientRect = playerElement.getBoundingClientRect();
     const playerL = playerClientRect.left;
@@ -53,7 +54,7 @@ const Player = ({
     const obstacleR = obstacleClientRect.right;
     const obstacleT = obstacleClientRect.top;
     const xCollisionObstacle =
-      obstacleR - LEFT_BUFFER > playerL && obstacleL < playerR;
+      obstacleR - LEFT_BUFFER > playerL - RIGHT_BUFFER && obstacleL < playerR - RIGHT_BUFFER;
     const yCollisionObstacle = playerB > obstacleT && playerT < obstacleB;
 
     const flyClientRect = flyElement.getBoundingClientRect();
