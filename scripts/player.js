@@ -44,7 +44,7 @@ const Player = ({
           influence.classList.remove("supreme");
           power.classList.add("active");
           playerElement.classList.add("supreme");
-          power.innerHTML = "10 segundos de proteção suprema!";
+          power.innerHTML = "10s de PROTEÇÃO SUPREMA!";
           protect = true;
 
           desabilityProtect();

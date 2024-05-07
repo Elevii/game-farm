@@ -93,18 +93,27 @@
     border-top-right-radius: 100%;
 }
 
-.obstacle-s {
+.lesm-l,
+.lesm-m,
+.lesm-s {
+    background-image: url("../../assets/larva.gif");
+}
+
+.obstacle-s,
+.lesm-s {
     width: 3rem;
     height: 3rem;
 }
 
-.obstacle-m {
+.obstacle-m,
+.lesm-m {
     width: 4rem;
     height: 4rem;
     bottom: -2%;
 }
 
-.obstacle-l {
+.obstacle-l,
+.lesm-l {
     width: 4rem;
     height: 5rem;
     bottom: -3%;
@@ -112,19 +121,22 @@
 
 @media(min-width: 780px) {
 
-    .obstacle-s {
+    .obstacle-s,
+    .lesm-s {
         width: 3%;
         height: 8%;
         bottom: -3%;
     }
 
-    .obstacle-m {
+    .obstacle-m,
+    .lesm-m {
         width: 4%;
         height: 10%;
         bottom: -4%;
     }
 
-    .obstacle-l {
+    .obstacle-l,
+    .lesm-l {
         width: 5%;
         height: 10%;
         bottom: -5%;

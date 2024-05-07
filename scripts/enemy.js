@@ -1,8 +1,14 @@
 const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
-  const OBSTACLE_SIZES = ["s", "m", "l"];
+  const OBSTACLE_SIZES = ["obstacle-s", "obstacle-m", "obstacle-l"];
   const FLY_POSITIONS = ["bottom", "center", "top"];
 
+  let hasLesm = false;
   function getRandomObstacleSize() {
+    if (level.classList.contains("level3") && !hasLesm) {
+      OBSTACLE_SIZES.push("lesm-s", "lesm-m", "lesm-l");
+      hasLesm = true;
+    }
+    
     const index = Math.floor(Math.random() * (OBSTACLE_SIZES.length - 1));
     return OBSTACLE_SIZES[index];
   }
@@ -22,7 +28,7 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
       setTimeout(() => {
         flyElement.classList.remove("invisible");
         randomiseEnemyPosition();
-      }, 3000)
+      }, 3000);
       return;
     }
   }
@@ -46,8 +52,8 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
   let beforeObstacle;
   function randomiseEnemySize(enemySize) {
     obstacleElement.classList.remove(beforeObstacle);
-    obstacleElement.classList.add(`obstacle-${enemySize}`);
-    beforeObstacle = `obstacle-${enemySize}`;
+    obstacleElement.classList.add(`${enemySize}`);
+    beforeObstacle = `${enemySize}`;
   }
 
   let beforeFly;

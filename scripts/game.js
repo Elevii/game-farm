@@ -67,7 +67,7 @@ const Game = () => {
       beforeInfluence = `${
         (INFLUENCE_ITEMS[index], INFLUENCE_POSITION[position])
       }`;
-    }, 12000);
+    }, 36000);
   }
 
   exit.addEventListener("click", () => saveUser());
