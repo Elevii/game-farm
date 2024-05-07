@@ -1,6 +1,6 @@
 .player {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
 
     position: absolute;
     bottom: -.5%;
@@ -13,9 +13,16 @@
     border: 1px solid;
 }
 
+@media(min-width: 780px) {
+    .player {
+        width: 8%;
+        height: 8%;
+    }
+}
+
 .player.jump {
     background-image: url("../../assets/jump.gif");
-    animation: jump 1.5s infinite;
+    animation: jump 1.8s infinite;
 }
 
 @keyframes jump {
@@ -47,62 +54,74 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    animation: move 6s linear infinite;
+    animation: move 4s linear infinite;
     border: 1px solid;
 }
 
 .obstacle {
-    width: 60px;
-    height: 60px;
-    bottom: -1%;
+    width: 4rem;
+    height: 4rem;
+    bottom: -2%;
     left: 80%;
     background-image: url('../../assets/percevejo.gif');
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
 }
 
-.obstacle-xs {
-    width: 30px;
-    height: 30px;
-}
-
 .obstacle-s {
-    width: 40px;
-    height: 40px;
-    bottom: -1%;
+    width: 4rem;
+    height: 4rem;
 }
 
 .obstacle-m {
-    width: 50px;
-    height: 50px;
-    bottom: -2%;
+    width: 5rem;
+    height: 5rem;
+    bottom: -3%;
 }
 
 .obstacle-l {
-    width: 60px;
-    height: 60px;
-    bottom: -2%;
+    width: 5rem;
+    height: 6rem;
+    bottom: -4%;
+}
+
+@media(min-width: 780px) {
+
+    .obstacle-s {
+        width: 6%;
+        height: 8%;
+    }
+
+    .obstacle-m {
+        width: 6%;
+        height: 10%;
+        bottom: -3%;
+    }
+
+    .obstacle-l {
+        width: 8%;
+        height: 10%;
+        bottom: -3%;
+    }
 }
 
 .fly {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     background-image: url("../../assets/moscasprite.gif");
     border-radius: 100%;
     bottom: 80px;
     left: 60%;
-    
-    animation: moveFly 6s linear infinite;
-}
 
-.fly.level2 {
-    animation: moveFly 5s linear infinite;
-}
-
-.fly.level3 {
     animation: moveFly 4s linear infinite;
 }
 
+@media(min-width: 780px) {
+    .fly {
+        width: 4%;
+        height: 4%;
+    }
+}
 
 .fly-top {
     bottom: 80px;

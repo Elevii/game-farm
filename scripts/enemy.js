@@ -1,5 +1,5 @@
 const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
-  const OBSTACLE_SIZES = ["xs", "s", "m", "l"];
+  const OBSTACLE_SIZES = ["s", "m", "l"];
   const FLY_POSITIONS = ["bottom", "center", "top"];
 
   function getRandomObstacleSize() {
@@ -22,7 +22,7 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
       setTimeout(() => {
         flyElement.classList.remove("invisible");
         randomiseEnemyPosition();
-      }, 3000);
+      }, 2500);
       return;
     }
   }
@@ -59,7 +59,7 @@ const Enemy = ({ obstacleElement, flyElement, level, newLevel }) => {
         flyElement.classList.remove(beforeFly);
         flyElement.classList.add(`fly-${flyPosition}`);
         beforeFly = `fly-${flyPosition}`;
-      }, 6000);
+      }, 4000);
     }
   }
 
