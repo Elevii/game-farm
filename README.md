@@ -4,6 +4,9 @@ Este é um jogo desafiador, onde você tentará superar as pragas que estão ten
 
 Você está prestes a entrar numa luta travada contra os inimigos do AGRO.
 
+![image](https://github.com/Elevii/game-farm/assets/69546112/a0424532-1a95-4112-b16e-6d7e4b471637)
+
+
 ### Como jogar 
 
 - Clique na tela do seu smartphone ou click com o mouse para pular e desviar dos inimigos;
