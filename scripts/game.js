@@ -52,7 +52,7 @@ const Game = () => {
   function startEnemies() {
     changeStartEnemies = setInterval(() => {
       startEnemy();
-    }, 6000);
+    }, 4000);
   }
 
   let beforeInfluence;
