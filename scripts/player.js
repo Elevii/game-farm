@@ -58,14 +58,14 @@ const Player = ({
           setScore(+scoreElement.innerText + 100);
           influence.classList.remove("positive");
           power.classList.add("active");
-          power.innerHTML = "+R$100,00";
+          power.innerHTML = "+100";
 
           desabilityPower();
         } else {
           setScore(+scoreElement.innerText - 100);
           influence.classList.remove("negative");
           power.classList.add("active");
-          power.innerHTML = "-R$100,00";
+          power.innerHTML = "-100";
 
           desabilityPower();
         }

@@ -130,21 +130,21 @@
     .lesm-s {
         width: 3%;
         height: 8%;
-        bottom: -3%;
+        bottom: -2.5%;
     }
 
     .obstacle-m,
     .lesm-m {
         width: 4%;
         height: 10%;
-        bottom: -4%;
+        bottom: -3%;
     }
 
     .obstacle-l,
     .lesm-l {
         width: 5%;
         height: 10%;
-        bottom: -5%;
+        bottom: -3%;
     }
 }
 
