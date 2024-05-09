@@ -173,7 +173,7 @@ body {
     padding: 2rem 1rem;
 }
 
-@media(min-width: 780px) {
+@media(min-width: 640px) {
     .modal-content {
         width: 40vw;
     }

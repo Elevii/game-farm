@@ -44,7 +44,7 @@
     }
 }
 
-@media(min-width: 780px) {
+@media(min-width: 640px) {
     .player {
         width: 5rem;
         height: 7rem;
@@ -135,7 +135,7 @@
     bottom: -3%;
 }
 
-@media(min-width: 780px) {
+@media(min-width: 640px) {
 
     .obstacle-s,
     .lesm-s {
@@ -191,7 +191,7 @@
     }
 }
 
-@media(min-width: 780px) {
+@media(min-width: 640px) {
     .fly {
         width: 2%;
         height: 4%;
@@ -207,7 +207,7 @@
     bottom: 80px;
 }
 
-@media(min-width: 780px) {
+@media(min-width: 640px) {
     .fly-top {
         bottom: 100px;
     }
