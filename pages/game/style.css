@@ -46,8 +46,9 @@
 
 @media(min-width: 780px) {
     .player {
-        width: 4%;
-        height: 8%;
+        width: 5rem;
+        height: 7rem;
+        bottom: -1.5%;
     }
 }
 
@@ -86,6 +87,16 @@
     background-position: center;
 
     animation: move 4s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100px;
+    }
 }
 
 .obstacle {
@@ -128,23 +139,34 @@
 
     .obstacle-s,
     .lesm-s {
-        width: 3%;
-        height: 8%;
-        bottom: -2.5%;
+        width: 4rem;
+        height: 4rem;
+        bottom: -2%;
+    }
+    .lesm-s {
+        bottom: -1%;
     }
 
     .obstacle-m,
     .lesm-m {
-        width: 4%;
-        height: 10%;
-        bottom: -3%;
+        width: 5rem;
+        height: 5rem;
+        bottom: -2.5%;
+    }
+
+    .lesm-m {
+        bottom: -1.5%;
     }
 
     .obstacle-l,
     .lesm-l {
-        width: 5%;
-        height: 10%;
+        width: 6rem;
+        height: 6rem;
         bottom: -3%;
+    }
+
+    .lesm-l {
+        bottom: -2%;
     }
 }
 
@@ -159,15 +181,36 @@
     animation: moveFly 4s linear infinite;
 }
 
+@keyframes moveFly {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -200px;
+    }
+}
+
 @media(min-width: 780px) {
     .fly {
         width: 2%;
         height: 4%;
+        bottom: 100px;
+    }
+
+    .fly-top {
+        bottom: 100px;
     }
 }
 
 .fly-top {
     bottom: 80px;
+}
+
+@media(min-width: 780px) {
+    .fly-top {
+        bottom: 100px;
+    }
 }
 
 .fly-center {
@@ -180,26 +223,6 @@
 
 .invisible {
     display: none;
-}
-
-@keyframes move {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: -100px;
-    }
-}
-
-@keyframes moveFly {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: -200px;
-    }
 }
 
 /* 

@@ -12,21 +12,31 @@ const Score = ({ scoreElement, highScoreElement }) => {
     }, 100);
   }
 
-  let highscore = localStorage.getItem("highscore") || 0;
-  function setHighScore(newScore) {
-    highScoreElement.innerText = highscore = newScore;
-    localStorage.setItem("highscore", newScore);
-  }
+  var URL_API = "https://amelios-api.andersudev.workers.dev/api/scores";
 
-  function checkForHighScore() {
-    if (score > highscore) {
-      setHighScore(score);
-    }
+  var myHeaders = new Headers();
+
+  var myInit = {
+    method: "GET",
+    headers: myHeaders,
+  };
+
+  let highscore = localStorage.getItem("highscore") || 0;
+  function setHighScore() {
+    fetch(URL_API, myInit)
+      .then((response) => response.json())
+      .then((resp) => {
+        localStorage.setItem("highscore", resp.scores[0].score);
+        highScoreElement.innerText = highscore = resp.scores[0].score;
+      })
+      .catch((err) => {
+        localStorage.setItem("highscore", "0000");
+      });
   }
 
   function startScore() {
     countScore();
-    setHighScore(highscore);
+    setHighScore();
   }
 
   function stopScore() {
@@ -36,7 +46,6 @@ const Score = ({ scoreElement, highScoreElement }) => {
   return {
     startScore,
     stopScore,
-    checkForHighScore,
     score,
     setScore,
   };
