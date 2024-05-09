@@ -39,16 +39,16 @@ function scoreListArray(saves) {
   }
 }
 
-deleteAll.addEventListener("click", () => {
-  fetch(`${URL_API}/all/delete`, {
-    method: "POST",
-  })
-    .then((response) => response.json())
-    .then((resp) => alert("Deletados com sucesso!"))
-    .catch((err) => {
-      console.error("error: ", err);
-    });
-});
+// deleteAll.addEventListener("click", () => {
+//   fetch(`${URL_API}/all/delete`, {
+//     method: "POST",
+//   })
+//     .then((response) => response.json())
+//     .then((resp) => alert("Deletados com sucesso!"))
+//     .catch((err) => {
+//       console.error("error: ", err);
+//     });
+// });
 
 function startScoreScreen() {
   handlerSaves();
