@@ -194,7 +194,7 @@
 
 @media(min-width: 640px) {
     .fly {
-        width: 2%;
+        width: 4%;
         height: 4%;
         bottom: 100px;
     }
