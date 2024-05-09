@@ -2,7 +2,6 @@ const Player = ({
   playerElement,
   obstacleElement,
   flyElement,
-  checkForHighScore,
   stopGame,
   influence,
   scoreElement,
@@ -41,7 +40,6 @@ const Player = ({
   function monitorCollision() {
     collisionInterval = setInterval(() => {
       if (isCollision() && !protect) {
-        checkForHighScore();
         stopGame();
       } else if (isInfluenceCollision()) {
         if (influence.classList.contains("supreme")) {

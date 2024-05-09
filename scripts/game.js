@@ -29,7 +29,7 @@ const Game = () => {
     level,
     newLevel,
   });
-  const { startScore, stopScore, checkForHighScore, setScore } = Score({
+  const { startScore, stopScore, setScore } = Score({
     scoreElement,
     highScoreElement,
   });
@@ -37,7 +37,6 @@ const Game = () => {
     playerElement,
     obstacleElement,
     flyElement,
-    checkForHighScore,
     stopGame,
     influence,
     scoreElement,
