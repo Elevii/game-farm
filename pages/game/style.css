@@ -139,8 +139,8 @@
 
     .obstacle-s,
     .lesm-s {
-        width: 8rem;
-        height: 8rem;
+        width: 5rem;
+        height: 7rem;
         bottom: -2%;
     }
     .lesm-s {
@@ -149,7 +149,7 @@
 
     .obstacle-m,
     .lesm-m {
-        width: 10rem;
+        width: 7rem;
         height: 10rem;
         bottom: -2.5%;
     }
