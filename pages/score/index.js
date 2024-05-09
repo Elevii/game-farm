@@ -26,12 +26,14 @@ function handlerSaves() {
 }
 
 function scoreListArray(saves) {
+  let count = 0;
   for (let save of saves) {
+    count += 1;
     const records = document.createElement("li");
     scoreList.appendChild(records);
 
     records.innerHTML = `    
-        <span>${save.name}</span>
+        <span>${count} - ${save.name}</span>
         <span>${save.score}</span>
     `;
   }
