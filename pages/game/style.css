@@ -46,9 +46,9 @@
 
 @media(min-width: 640px) {
     .player {
-        width: 15%;
-        height: 10%;
-        bottom: -1.5%;
+        width: 13.75rem;
+        height: 20.75rem;
+        bottom: -2%;
     }
 }
 
@@ -160,8 +160,8 @@
 
     .obstacle-s,
     .lesm-s {
-        width: 14%;
-        height: 6%;
+        width: 8rem;
+        height: 10rem;
         bottom: -1.5%;
     }
 
@@ -171,8 +171,8 @@
 
     .obstacle-m,
     .lesm-m {
-        width: 16%;
-        height: 8%;
+        width: 10rem;
+        height: 12rem;
         bottom: -2.5%;
     }
 
@@ -182,8 +182,8 @@
 
     .obstacle-l,
     .lesm-l {
-        width: 18%;
-        height: 10%;
+        width: 12rem;
+        height: 14rem;
         bottom: -3%;
     }
 
@@ -215,13 +215,13 @@
 
 @media(min-width: 640px) {
     .fly {
-        width: 8%;
-        height: 4%;
-        bottom: 240px;
+        width: 6rem;
+        height: 6rem;
+        bottom: 15rem;
     }
 
     .fly-top {
-        bottom: 240px;
+        bottom: 15rem;
     }
 }
 
@@ -236,11 +236,11 @@
 }
 
 .fly-center {
-    bottom: 50px;
+    bottom: 3rem;
 }
 
 .fly-bottom {
-    bottom: 30px;
+    bottom: 1.5rem;
 }
 
 .invisible {
@@ -410,8 +410,8 @@
 
 @media(min-width: 640px) {
     .influence {
-        width: 8%;
-        height: 4%;
+        width: 6.5rem;
+        height: 6.5rem;
         bottom: 240px;
     }
 }
