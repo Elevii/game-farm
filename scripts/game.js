@@ -106,12 +106,12 @@ const Game = () => {
         const usr = resp.scores.find((el) => el.name === user.name);
         if (!usr) return handlerUsers(user, button);
 
-        if (usr.score > user.score) {
+        if (usr.score >= user.score) {
           if (button === "EXIT") return location.replace("../../index.html");
 
           return location.reload();
         }
-        console.log("teste");
+        
         handlerUser(usr, button);
       })
       .catch((err) => console.error("error: ", err));
