@@ -80,15 +80,15 @@
         0% {
             bottom: 0;
         }
-    
+
         25% {
             bottom: 500px;
         }
-    
+
         40% {
             bottom: 500px;
         }
-    
+
         100% {
             bottom: 0;
         }
@@ -164,6 +164,7 @@
         height: 6%;
         bottom: -1.5%;
     }
+
     .lesm-s {
         bottom: -1%;
     }
@@ -312,6 +313,7 @@
     height: 50px;
     background-image: url('../../assets/restart.png');
     background-size: contain;
+    background-repeat: no-repeat;
     margin-left: 15px;
     cursor: pointer;
 }
@@ -319,6 +321,21 @@
 .restart-game .text {
     align-self: end;
     color: #000;
+}
+
+@media(min-width: 640px) {
+    .score-card, .level-card {
+        font-size: 6rem;
+    }
+
+    .restart-game .btn-reset-game {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .restart-game .text {
+        font-size: 6rem;
+    }
 }
 
 .options {
@@ -391,7 +408,7 @@
 }
 
 
-@media(min-width: 640px){
+@media(min-width: 640px) {
     .influence {
         width: 8%;
         height: 4%;

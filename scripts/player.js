@@ -97,7 +97,7 @@ const Player = ({
 
   // Left buffer for tail
   const LEFT_BUFFER = 50;
-  const RIGHT_BUFFER = 60;
+  const RIGHT_BUFFER = 80;
   function isCollision() {
     const playerClientRect = playerElement.getBoundingClientRect();
     const playerL = playerClientRect.left;
