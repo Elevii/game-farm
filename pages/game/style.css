@@ -46,15 +46,15 @@
 
 @media(min-width: 640px) {
     .player {
-        width: 5rem;
-        height: 7rem;
+        width: 15%;
+        height: 10%;
         bottom: -1.5%;
     }
 }
 
 .player.jump {
     background-image: url("../../assets/jump.gif");
-    animation: jump 1.5s infinite;
+    animation: jump 1.8s infinite;
 }
 
 @keyframes jump {
@@ -75,6 +75,26 @@
     }
 }
 
+@media(min-width: 640px) {
+    @keyframes jump {
+        0% {
+            bottom: 0;
+        }
+    
+        25% {
+            bottom: 500px;
+        }
+    
+        40% {
+            bottom: 500px;
+        }
+    
+        100% {
+            bottom: 0;
+        }
+    }
+}
+
 /*
     ENEMY
 */
@@ -87,6 +107,7 @@
     background-position: center;
 
     animation: move 4s linear infinite;
+    border-radius: 100%;
 }
 
 @keyframes move {
@@ -139,9 +160,9 @@
 
     .obstacle-s,
     .lesm-s {
-        width: 4rem;
-        height: 4rem;
-        bottom: -2%;
+        width: 14%;
+        height: 6%;
+        bottom: -1.5%;
     }
     .lesm-s {
         bottom: -1%;
@@ -149,8 +170,8 @@
 
     .obstacle-m,
     .lesm-m {
-        width: 5rem;
-        height: 5rem;
+        width: 16%;
+        height: 8%;
         bottom: -2.5%;
     }
 
@@ -160,8 +181,8 @@
 
     .obstacle-l,
     .lesm-l {
-        width: 6rem;
-        height: 6rem;
+        width: 18%;
+        height: 10%;
         bottom: -3%;
     }
 
@@ -193,13 +214,13 @@
 
 @media(min-width: 640px) {
     .fly {
-        width: 2%;
+        width: 8%;
         height: 4%;
-        bottom: 100px;
+        bottom: 240px;
     }
 
     .fly-top {
-        bottom: 100px;
+        bottom: 240px;
     }
 }
 
@@ -358,16 +379,26 @@
 }
 
 .influence.bottom {
-    bottom: 30px;
+    bottom: 60px;
 }
 
 .influence.middle {
-    bottom: 50px;
+    bottom: 120px;
 }
 
 .influence.top {
-    bottom: 80px;
+    bottom: 240px;
 }
+
+
+@media(min-width: 640px){
+    .influence {
+        width: 8%;
+        height: 4%;
+        bottom: 240px;
+    }
+}
+
 
 .power {
     display: none;

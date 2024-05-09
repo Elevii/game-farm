@@ -26,7 +26,7 @@ const Player = ({
     setTimeout(() => {
       playerElement.classList.remove("jump");
       jumping = false;
-    }, 1500);
+    }, 1800);
   }
 
   /**
@@ -97,7 +97,7 @@ const Player = ({
 
   // Left buffer for tail
   const LEFT_BUFFER = 50;
-  const RIGHT_BUFFER = 30;
+  const RIGHT_BUFFER = 60;
   function isCollision() {
     const playerClientRect = playerElement.getBoundingClientRect();
     const playerL = playerClientRect.left;
