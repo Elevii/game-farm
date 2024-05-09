@@ -46,8 +46,8 @@
 
 @media(min-width: 640px) {
     .player {
-        width: 5rem;
-        height: 7rem;
+        width: 10rem;
+        height: 20rem;
         bottom: -1.5%;
     }
 }
